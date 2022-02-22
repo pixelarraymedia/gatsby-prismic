@@ -1,0 +1,55 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Gatsby prsimic application",
+  "dependencies": {
+    "@prismicio/react": "^2.0.6",
+    "gatsby": "^4.7.2",
+    "gatsby-cli": "^4.7.0",
+    "gatsby-plugin-express": "^1.1.6",
+    "gatsby-plugin-gatsby-cloud": "^4.7.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.7.0",
+    "gatsby-plugin-manifest": "^4.7.0",
+    "gatsby-plugin-offline": "^5.7.0",
+    "gatsby-plugin-prismic-previews": "^5.2.5",
+    "gatsby-plugin-react-helmet": "^5.7.0",
+    "gatsby-plugin-sharp": "^4.7.0",
+    "gatsby-source-filesystem": "^4.7.0",
+    "gatsby-source-prismic": "^5.2.5",
+    "gatsby-transformer-sharp": "^4.7.0",
+    "prismic-cli": "^4.2.2",
+    "prop-types": "^15.8.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.1",
+    "autoprefixer": "^10.4.2",
+    "gatsby-plugin-postcss": "^5.7.0",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.22"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

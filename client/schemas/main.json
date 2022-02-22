@@ -1,0 +1,46 @@
+{
+    "Main" : {
+      "landing_header" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+          "label" : "landing_header"
+        }
+      },
+      "landing-text" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+          "label" : "landing-text"
+        }
+      },
+      "hero_img" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : null
+          },
+          "thumbnails" : [ ],
+          "label" : "hero_img"
+        }
+      },
+      "body" : {
+        "type" : "Slices",
+        "fieldset" : "Slice zone",
+        "config" : {
+          "labels" : null,
+          "choices" : {
+            "mainslice" : {
+              "type" : "Slice",
+              "fieldset" : "mainslice",
+              "description" : "main",
+              "icon" : "add_circle",
+              "display" : "grid",
+              "non-repeat" : { },
+              "repeat" : { }
+            }
+          }
+        }
+      }
+    }
+  }
