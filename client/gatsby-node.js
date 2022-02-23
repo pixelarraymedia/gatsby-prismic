@@ -17,6 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
           id
           lang
           url
+          uid
         }
      
       }

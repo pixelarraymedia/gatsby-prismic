@@ -18,6 +18,8 @@ const PageTemplate = ({ data }) => {
   const alternateLanguages = pageContent.alternate_languages || []
   const activeDoc = {
     lang,
+
+
     type,
     url,
     alternateLanguages,
@@ -32,27 +34,35 @@ const PageTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-query PageQuery($id: String) {
-  prismicPage(id: {eq: $id}) {
-    _previewable
-    data {
-      body {
-        ... on PrismicSliceType {
-          id
-          slice_label
-          slice_type
-        }
-        ...PageDataBodyFullWidthImage
-        ...PageDataBodyHeadlineWithButton
-        ...PageDataBodyInfoWithImage
-        ...PageDataBodyTextInfo
+  query PageQuery($id: String) {
+    prismicPage(id: { eq: $id }) {
+      _previewable
+      alternate_languages {
+        uid
+        type
+        lang
+        id
+      }
+      lang
+      url
+      type
+      data {
+        body {
+          ... on PrismicSliceType {
+            id
+            slice_type
+            slice_label
+          }
+          ...PageDataBodyFullWidthImage
+          ...PageDataBodyHeadlineWithButton
+          ...PageDataBodyInfoWithImage
+          ...PageDataBodyTextInfo
+      }
+      }
       }
     }
-  }
-}
-
-
-
+    
+      
 `
 
 export default withPrismicPreview(PageTemplate)

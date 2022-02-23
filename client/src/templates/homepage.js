@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { withPrismicPreview } from 'gatsby-plugin-prismic-previews'
 import { SliceZone } from '@prismicio/react'
 
-import   Layout  from '../components/Layout'
+import  Layout from '../components/Layout'
 import { components } from '../components/slices'
 
 const HomepageTemplate = ({ data }) => {
@@ -30,14 +30,23 @@ const HomepageTemplate = ({ data }) => {
  
 export const query = graphql`
 query PageTemplate($id: String) {
-  prismicHomepage(id: {eq: $id}) {
+prismicHomepage(id: {eq: $id}) {
     _previewable
+    alternate_languages {
+      uid
+      type
+      lang
+      id
+    }
+    lang
+    url
+    type
     data {
       body {
         ... on PrismicSliceType {
           id
-          slice_label
           slice_type
+          slice_label
         }
         ...HomepageDataBodyFullWidthImage
         ...HomepageDataBodyHeadlineWithButton

@@ -10,6 +10,11 @@ require('dotenv').config({
 })
 
 module.exports = {
+   siteMetadata: {
+    siteURL: 'pixelarrayca',
+    siteName: 'pixelarray ',
+  },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -57,4 +62,7 @@ module.exports = {
     }
 
   ]
+
+
+  
 }

@@ -10,7 +10,7 @@ import { Link } from 'gatsby'
 import { PrismicProvider } from '@prismicio/react'
 import { linkResolver } from './src/linkResolver'
 import HomepageTemplate from './src/templates/homepage'
-
+import PageTemplate from './src/templates/page'
 export const wrapRootElement = ({ element }) => (
   
   <PrismicProvider
@@ -24,7 +24,8 @@ export const wrapRootElement = ({ element }) => (
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         linkResolver,
         componentResolver: componentResolverFromMap({
-          page: HomepageTemplate,
+        homepage: HomepageTemplate,
+          page: PageTemplate
         }),
       },
     ]}
